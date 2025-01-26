@@ -36,6 +36,7 @@ public class CardTrick {
         luckyCard.setValue(7); // Example lucky card value
         luckyCard.setSuit("Hearts"); // Example lucky card suit
         magicHand[magicHand.length - 1] = luckyCard; // Replace the last card with the lucky card
+        
         // Ask the user for their card value and suit
         Scanner scanner = new Scanner(System.in);
         System.out.print("Pick your card value (1-13): ");
@@ -67,13 +68,13 @@ public class CardTrick {
             }
         }
         
-        // Display result
-        if (isCardFound) {
-            System.out.println("Your card was found in the magic hand!");
-        } else {
-            System.out.println("Your card was not found.");
-        }
         
+// Display result
+if (isCardFound) {
+    System.out.println("Congratulations! Your lucky card (" + luckyCard.getValue() + " of " + luckyCard.getSuit() + ") was found in the magic hand!");
+} else {
+    System.out.println("Sorry! Your lucky card (" + luckyCard.getValue() + " of " + luckyCard.getSuit() + ") was not found.");
+}
         // Close the Scanner
         scanner.close();
     }
