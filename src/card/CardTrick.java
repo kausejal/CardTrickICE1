@@ -34,7 +34,7 @@ public class CardTrick {
          // Adding a hard-coded lucky card
         Card luckyCard = new Card();
         luckyCard.setValue(2); // Example lucky card value
-        luckyCard.setSuit("Clubs"); // Example lucky card suit
+        luckyCard.setSuit("Clubs"); // Example lucky card suit is clubs
         magicHand[magicHand.length - 1] = luckyCard; // Replace the last card with the lucky card
         
         // Ask the user for their card value and suit
