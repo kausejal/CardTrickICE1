@@ -31,12 +31,18 @@ public class CardTrick {
             c.setSuit(suits[rand.nextInt(4)]); // Random suit
             magicHand[i] = c; // Add card to magic hand
         }
+        
          // Adding a hard-coded lucky card
         Card luckyCard = new Card();
         luckyCard.setValue(2); // Example lucky card value
         luckyCard.setSuit("Clubs"); // Example lucky card suit is clubs
         magicHand[magicHand.length - 1] = luckyCard; // Replace the last card with the lucky card
         
+         // Display the magic hand
+        System.out.println("Magic Hand:");
+        for (Card card : magicHand) {
+            System.out.println(card.getSuit() + " " + card.getValue());
+        }
         // Ask the user for their card value and suit
         Scanner scanner = new Scanner(System.in);
         System.out.print("Pick your card value (1-13): ");
